@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dinámicas Feria del Libro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <!-- CUANDO TENGAS LOGO: descomenta y cambia src -->
+  <!-- <img src="logo.png" alt="Logo" class="logo"> -->
+  <h1>Banco de Dinámicas</h1>
+</header>
+
+<section class="filters">
+
+  <div class="filter-group">
+    <h3>Curso / Edad</h3>
+    <div id="ageButtons" class="button-group"></div>
+  </div>
+
+  <div class="filter-group">
+    <h3>Duración</h3>
+    <select id="timeFilter">
+      <option value="all">Todas</option>
+      <option value="short">≤ 3 min</option>
+      <option value="medium">4–7 min</option>
+      <option value="long">8–15 min</option>
+    </select>
+  </div>
+
+  <div class="filter-group">
+    <h3>Máx. alumnos</h3>
+    <select id="sizeFilter">
+      <option value="all">Todos</option>
+      <option value="50">Hasta 50</option>
+      <option value="75">Hasta 75</option>
+      <option value="100">Hasta 100</option>
+    </select>
+  </div>
+
+  <button id="resetBtn" class="reset">Limpiar filtros</button>
+
+</section>
+
+<main id="activities" class="cards"></main>
+
+<script src="script.js"></script>
+</body>
+</html>

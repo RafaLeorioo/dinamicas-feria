@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fa;
+}
+
+header {
+  background: #2b4eff;
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.logo {
+  max-height: 80px;
+  margin-bottom: 10px;
+}
+
+.filters {
+  background: white;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.filter-group h3 {
+  margin: 0 0 8px 0;
+  font-size: 0.95rem;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.button-group button {
+  padding: 6px 10px;
+  border: 1px solid #aaa;
+  background: #eee;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.button-group button.active {
+  background: #2b4eff;
+  color: white;
+  border-color: #2b4eff;
+}
+
+select {
+  width: 100%;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.reset {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.cards {
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 14px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2b4eff;
+}
+
+.label {
+  font-weight: bold;
+}
