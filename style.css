@@ -11,20 +11,13 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
-
+/* HEADER - AZUL CLARO */
 header {
-  background: #0c1a4b;
+  background: #4A90E2; /* Azul claro bonito */
   color: #fff;
   padding: 32px 20px;
   text-align: center;
   border-bottom: 4px solid #f4c842;
-}
-
-header h1 {
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
 .logo {
@@ -33,7 +26,6 @@ header h1 {
 }
 
 /* FILTROS */
-
 .filters {
   background: #ffffff;
   padding: 20px;
@@ -45,7 +37,7 @@ header h1 {
 .filter-group h3 {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #0c1a4b;
+  color: #4A90E2;
   margin-bottom: 8px;
 }
 
@@ -57,9 +49,9 @@ header h1 {
 
 .button-group button {
   padding: 8px 12px;
-  border: 1px solid #0c1a4b;
+  border: 1px solid #4A90E2;
   background: #ffffff;
-  color: #0c1a4b;
+  color: #4A90E2;
   border-radius: 8px;
   cursor: pointer;
   font-size: 0.85rem;
@@ -67,13 +59,13 @@ header h1 {
 }
 
 .button-group button:hover {
-  background: #0c1a4b;
+  background: #4A90E2;
   color: #ffffff;
 }
 
 .button-group button.active {
   background: #f4c842;
-  color: #0c1a4b;
+  color: #4A90E2;
   border-color: #f4c842;
 }
 
@@ -85,7 +77,6 @@ header h1 {
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.2s ease-in-out;
 }
 
 .reset:hover {
@@ -93,7 +84,6 @@ header h1 {
 }
 
 /* TARJETAS */
-
 .cards {
   padding: 22px;
   display: grid;
@@ -108,6 +98,8 @@ header h1 {
   box-shadow: 0 6px 14px rgba(0,0,0,0.07);
   padding: 18px;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -118,17 +110,89 @@ header h1 {
 .card h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #0c1a4b;
+  color: #4A90E2;
   margin-bottom: 10px;
 }
 
 .label {
   font-weight: 600;
-  color: #0c1a4b;
+  color: #4A90E2;
   font-size: 0.88rem;
 }
 
 .card p {
   font-size: 0.88rem;
   margin: 6px 0;
+  flex-grow: 1;
+}
+
+.more-info-btn {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: #4A90E2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  align-self: flex-start;
+}
+
+.more-info-btn:hover {
+  background: #357abd;
+}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 24px;
+  border-radius: 14px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+}
+
+.modal-content h2 {
+  color: #4A90E2;
+  margin-bottom: 16px;
+}
+
+.modal-content p {
+  margin: 10px 0;
+}
+
+.modal-content hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid #eee;
 }

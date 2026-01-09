@@ -9,7 +9,6 @@
 <body>
 
 <header>
-  <!-- Cuando tengas logo -->
   <img src="logo.png" alt="Logo" class="logo">
 </header>
 
@@ -30,11 +29,25 @@
     <div id="sizeButtons" class="button-group"></div>
   </div>
 
+  <div class="filter-group">
+    <h3>Feriantes</h3>
+    <div id="peopleButtons" class="button-group"></div>
+  </div>
+
   <button id="resetBtn" class="reset">Limpiar filtros</button>
 
 </section>
 
 <main id="activities" class="cards"></main>
+
+<!-- Modal para más información -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
