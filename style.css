@@ -1,18 +1,30 @@
 * {
   box-sizing: border-box;
-  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 body {
-  margin: 0;
-  background: #f5f7fa;
+  background: #ffffff;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* HEADER */
+
 header {
-  background: #2b4eff;
-  color: white;
-  padding: 30px 20px;
+  background: #0c1a4b;
+  color: #fff;
+  padding: 32px 20px;
   text-align: center;
+  border-bottom: 4px solid #f4c842;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
 }
 
 .logo {
@@ -20,75 +32,103 @@ header {
   margin-bottom: 10px;
 }
 
+/* FILTROS */
+
 .filters {
-  background: white;
+  background: #ffffff;
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 15px;
-  border-bottom: 1px solid #ddd;
+  gap: 16px;
+  border-bottom: 1px solid #eee;
 }
 
 .filter-group h3 {
-  margin: 0 0 8px 0;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #0c1a4b;
+  margin-bottom: 8px;
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
+  gap: 8px;
 }
 
 .button-group button {
-  padding: 6px 10px;
-  border: 1px solid #aaa;
-  background: #eee;
-  border-radius: 6px;
+  padding: 8px 12px;
+  border: 1px solid #0c1a4b;
+  background: #ffffff;
+  color: #0c1a4b;
+  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
+  transition: 0.2s ease-in-out;
+}
+
+.button-group button:hover {
+  background: #0c1a4b;
+  color: #ffffff;
 }
 
 .button-group button.active {
-  background: #2b4eff;
-  color: white;
-  border-color: #2b4eff;
-}
-
-select {
-  width: 100%;
-  padding: 6px;
-  border-radius: 6px;
+  background: #f4c842;
+  color: #0c1a4b;
+  border-color: #f4c842;
 }
 
 .reset {
-  background: #ff4d4d;
+  background: #f44336;
   color: white;
   border: none;
+  padding: 10px 14px;
   border-radius: 8px;
-  padding: 10px;
   cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease-in-out;
 }
 
+.reset:hover {
+  background: #c62828;
+}
+
+/* TARJETAS */
+
 .cards {
-  padding: 20px;
+  padding: 22px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 15px;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 18px;
 }
 
 .card {
-  background: white;
-  padding: 15px;
+  background: #ffffff;
   border-radius: 14px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  border: 1px solid #eee;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+  padding: 18px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.1);
 }
 
 .card h2 {
-  margin-top: 0;
-  color: #2b4eff;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #0c1a4b;
+  margin-bottom: 10px;
 }
 
 .label {
-  font-weight: bold;
+  font-weight: 600;
+  color: #0c1a4b;
+  font-size: 0.88rem;
+}
+
+.card p {
+  font-size: 0.88rem;
+  margin: 6px 0;
 }

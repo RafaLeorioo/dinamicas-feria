@@ -7,8 +7,7 @@ const activities = [
     people: "1 o 2 feriantes + 1 línea",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: `Lectura teatralizada donde el alumnado repite la última palabra en forma de eco. 
-    En "Como tú, como yo" se repiten las palabras en mayúsculas de cada página.`
+    description: "Lectura teatralizada donde el alumnado repite la última palabra en forma de eco. En 'Como tú, como yo' se repiten las palabras en mayúsculas de cada página."
   },
   {
     title: "Cuento congelado",
@@ -18,8 +17,7 @@ const activities = [
     people: "1 o 2 feriantes + 1 línea",
     maxStudents: 50,
     visit: "20 min (7' + 13')",
-    description: `Mientras se narra el cuento se mueven libremente. Cuando la narración se detiene, todos se congelan. 
-    Variante: representar emociones cuando aparecen en el cuento.`
+    description: "Mientras se narra el cuento se mueven libremente. Cuando la narración se detiene, todos se congelan. Variante: representar emociones cuando aparecen en el cuento."
   },
   {
     title: "Finales locos",
@@ -29,8 +27,7 @@ const activities = [
     people: "2 feriantes + 1-2 líneas",
     maxStudents: 50,
     visit: "30 min (15' + 15')",
-    description: `Se cuenta un cuento clásico con huecos que el alumnado completa con ideas absurdas. 
-    Favorece creatividad y participación.`
+    description: "Se cuenta un cuento clásico con huecos que el alumnado completa con ideas absurdas. Favorece creatividad y participación."
   },
   {
     title: "Preguntas y respuestas",
@@ -40,8 +37,7 @@ const activities = [
     people: "2 feriantes + 1 línea",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: `Juego de preguntas por categorías: personajes, títulos y vocabulario. 
-    Posibilidad de rebote si fallan.`
+    description: "Juego de preguntas por categorías: personajes, títulos y vocabulario. Posibilidad de rebote si fallan."
   },
   {
     title: "Cuento invisible",
@@ -51,8 +47,7 @@ const activities = [
     people: "1 feriante + 1 línea",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: `Se inventa un cuento haciendo preguntas al grupo para construirlo juntos, 
-    conectándolo con libros reales de la feria.`
+    description: "Se inventa un cuento haciendo preguntas al grupo para construirlo juntos, conectándolo con libros reales de la feria."
   },
   {
     title: "¿Quién ganaría?",
@@ -62,8 +57,7 @@ const activities = [
     people: "2 feriantes + 1 línea",
     maxStudents: 50,
     visit: "20 min (10' + 10')",
-    description: `Se comparan dos personajes en diferentes pruebas. 
-    El grupo se mueve hacia el lado del personaje que creen que ganaría.`
+    description: "Se comparan dos personajes en diferentes pruebas. El grupo se mueve hacia el lado del personaje que creen que ganaría."
   },
   {
     title: "¿Qué preferirías?",
@@ -73,8 +67,7 @@ const activities = [
     people: "1 feriante + 1 línea",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: `Elección entre dos opciones de personajes o situaciones, 
-    enlazando con libros disponibles en la feria.`
+    description: "Elección entre dos opciones de personajes o situaciones, enlazando con libros disponibles en la feria."
   },
   {
     title: "El personaje secreto",
@@ -84,7 +77,7 @@ const activities = [
     people: "1 feriante + 1 línea",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    description: `Se dan pistas progresivas para adivinar un personaje de los libros de la feria.`
+    description: "Se dan pistas progresivas para adivinar un personaje de los libros de la feria."
   },
   {
     title: "Una palabra",
@@ -94,46 +87,82 @@ const activities = [
     people: "1 feriante + 1 línea",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    description: `Se dice un personaje y el alumnado responde con asociaciones rápidas de palabras.`
+    description: "Se dice un personaje y el alumnado responde con asociaciones rápidas de palabras."
   }
 ];
 
-// ---------- FILTROS ----------
+// ===== FILTROS =====
 
-const ageOptions = ["Infantil","1º","2º","3º","4º","5º","6º"];
+const ageOptions = ["Infantil", "1º", "2º", "3º", "4º", "5º", "6º"];
+
+const timeOptions = [
+  { label: "≤ 3 min", value: "short" },
+  { label: "4–7 min", value: "medium" },
+  { label: "8–15 min", value: "long" }
+];
+
+const sizeOptions = [
+  { label: "Hasta 50", value: 50 },
+  { label: "Hasta 75", value: 75 },
+  { label: "Hasta 100", value: 100 }
+];
+
 const activeAges = new Set();
+const activeTimes = new Set();
+const activeSizes = new Set();
 
 const ageContainer = document.getElementById("ageButtons");
-const timeFilter = document.getElementById("timeFilter");
-const sizeFilter = document.getElementById("sizeFilter");
+const timeContainer = document.getElementById("timeButtons");
+const sizeContainer = document.getElementById("sizeButtons");
 const resetBtn = document.getElementById("resetBtn");
 const cardsContainer = document.getElementById("activities");
 
-// crear botones edad
+// Botones edad
 ageOptions.forEach(age => {
   const btn = document.createElement("button");
   btn.textContent = age;
   btn.onclick = () => {
     btn.classList.toggle("active");
-    if (activeAges.has(age)) activeAges.delete(age);
-    else activeAges.add(age);
+    activeAges.has(age) ? activeAges.delete(age) : activeAges.add(age);
     applyFilters();
   };
   ageContainer.appendChild(btn);
 });
 
-timeFilter.onchange = applyFilters;
-sizeFilter.onchange = applyFilters;
+// Botones duración
+timeOptions.forEach(opt => {
+  const btn = document.createElement("button");
+  btn.textContent = opt.label;
+  btn.onclick = () => {
+    btn.classList.toggle("active");
+    activeTimes.has(opt.value) ? activeTimes.delete(opt.value) : activeTimes.add(opt.value);
+    applyFilters();
+  };
+  timeContainer.appendChild(btn);
+});
 
+// Botones alumnos
+sizeOptions.forEach(opt => {
+  const btn = document.createElement("button");
+  btn.textContent = opt.label;
+  btn.onclick = () => {
+    btn.classList.toggle("active");
+    activeSizes.has(opt.value) ? activeSizes.delete(opt.value) : activeSizes.add(opt.value);
+    applyFilters();
+  };
+  sizeContainer.appendChild(btn);
+});
+
+// Reset
 resetBtn.onclick = () => {
   activeAges.clear();
+  activeTimes.clear();
+  activeSizes.clear();
   document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
-  timeFilter.value = "all";
-  sizeFilter.value = "all";
   renderCards(activities);
 };
 
-// ---------- RENDER ----------
+// ===== RENDER =====
 
 function renderCards(list) {
   cardsContainer.innerHTML = "";
@@ -159,27 +188,37 @@ function renderCards(list) {
   });
 }
 
-// ---------- FILTRADO ----------
+// ===== FILTRADO =====
 
 function applyFilters() {
   let result = activities.filter(a => {
 
-    // edad
+    // Edad
     if (activeAges.size > 0) {
       let match = a.ages.some(age => activeAges.has(age));
       if (!match) return false;
     }
 
-    // tiempo
-    if (timeFilter.value !== "all") {
-      if (timeFilter.value === "short" && a.duration > 3) return false;
-      if (timeFilter.value === "medium" && (a.duration < 4 || a.duration > 7)) return false;
-      if (timeFilter.value === "long" && a.duration < 8) return false;
+    // Duración
+    if (activeTimes.size > 0) {
+      let matchTime = false;
+      activeTimes.forEach(t => {
+        if (
+          (t === "short" && a.duration <= 3) ||
+          (t === "medium" && a.duration >= 4 && a.duration <= 7) ||
+          (t === "long" && a.duration >= 8)
+        ) matchTime = true;
+      });
+      if (!matchTime) return false;
     }
 
-    // alumnos
-    if (sizeFilter.value !== "all") {
-      if (a.maxStudents > parseInt(sizeFilter.value)) return false;
+    // Alumnos
+    if (activeSizes.size > 0) {
+      let matchSize = false;
+      activeSizes.forEach(s => {
+        if (a.maxStudents <= s) matchSize = true;
+      });
+      if (!matchSize) return false;
     }
 
     return true;
@@ -188,5 +227,5 @@ function applyFilters() {
   renderCards(result);
 }
 
-// inicial
+// Inicial
 renderCards(activities);
