@@ -161,8 +161,6 @@ Adaptar los personajes a la edad del grupo (más infantiles para 1.º-2.º de Pr
   }
 ];
 
-// ===== (El resto del código JavaScript sigue igual que en la versión anterior) =====
-
 let selectedAge = null;
 let selectedTime = null;
 let selectedSize = null;
@@ -184,20 +182,67 @@ const closeModal = document.querySelector(".close");
 closeModal.onclick = () => modal.style.display = "none";
 window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
 
-// Función para activar solo un botón por grupo
+// Toggle filtros
+const toggleBtn = document.getElementById("toggleFiltersBtn");
+const toggleText = document.getElementById("toggleText");
+const toggleIcon = document.getElementById("toggleIcon");
+const activeCount = document.getElementById("activeCount");
+const filtersPanel = document.getElementById("filtersPanel");
+
+let filtersOpen = false;
+let activeFiltersCount = 0;
+
+function updateToggleButton() {
+  if (filtersOpen) {
+    toggleText.textContent = "Ocultar filtros";
+    toggleIcon.textContent = "▲";
+  } else {
+    toggleText.textContent = "Filtros";
+    toggleIcon.textContent = "▼";
+  }
+  activeCount.textContent = activeFiltersCount > 0 ? `(${activeFiltersCount})` : "";
+  activeCount.style.display = activeFiltersCount > 0 ? "inline" : "none";
+}
+
+function countActiveFilters() {
+  activeFiltersCount = 0;
+  if (selectedAge) activeFiltersCount++;
+  if (selectedTime) activeFiltersCount++;
+  if (selectedSize) activeFiltersCount++;
+  if (selectedPeople) activeFiltersCount++;
+  updateToggleButton();
+}
+
+toggleBtn.onclick = () => {
+  filtersOpen = !filtersOpen;
+  filtersPanel.classList.toggle("hidden");
+  updateToggleButton();
+};
+
 function activateSingleButton(groupContainer, selectedVar, value, apply = true) {
   groupContainer.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+  let changed = false;
   if (selectedVar === value) {
-    selectedVar = null; // Si se pulsa el mismo, se deselecciona
-  } else {
+    selectedVar = null;
+    changed = true;
+  } else if (selectedVar !== value) {
     selectedVar = value;
     event.target.classList.add("active");
+    changed = true;
   }
-  if (apply) applyFilters();
+  if (apply && changed) {
+    applyFilters();
+    countActiveFilters();
+    if (filtersOpen) {
+      filtersOpen = false;
+      filtersPanel.classList.add("hidden");
+      updateToggleButton();
+    }
+  }
   return selectedVar;
 }
 
-// Botones (igual que antes)
+// Botones
 const ageOptions = ["Infantil", "1º", "2º", "3º", "4º", "5º", "6º"];
 const timeOptions = [{ label: "≤ 3 min", value: "short" }, { label: "4–7 min", value: "medium" }, { label: "8–15 min", value: "long" }];
 const sizeOptions = [{ label: "Hasta 50", value: 50 }, { label: "Hasta 75", value: 75 }, { label: "Hasta 100", value: 100 }];
@@ -206,28 +251,28 @@ const peopleOptions = [{ label: "1 feriante", value: "1" }, { label: "2 feriante
 ageOptions.forEach(age => {
   const btn = document.createElement("button");
   btn.textContent = age;
-  btn.onclick = (e) => { selectedAge = activateSingleButton(ageContainer, selectedAge, age); };
+  btn.onclick = () => selectedAge = activateSingleButton(ageContainer, selectedAge, age);
   ageContainer.appendChild(btn);
 });
 
 timeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = (e) => { selectedTime = activateSingleButton(timeContainer, selectedTime, opt.value); };
+  btn.onclick = () => selectedTime = activateSingleButton(timeContainer, selectedTime, opt.value);
   timeContainer.appendChild(btn);
 });
 
 sizeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = (e) => { selectedSize = activateSingleButton(sizeContainer, selectedSize, opt.value); };
+  btn.onclick = () => selectedSize = activateSingleButton(sizeContainer, selectedSize, opt.value);
   sizeContainer.appendChild(btn);
 });
 
 peopleOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = (e) => { selectedPeople = activateSingleButton(peopleContainer, selectedPeople, opt.value); };
+  btn.onclick = () => selectedPeople = activateSingleButton(peopleContainer, selectedPeople, opt.value);
   peopleContainer.appendChild(btn);
 });
 
@@ -235,9 +280,15 @@ resetBtn.onclick = () => {
   selectedAge = selectedTime = selectedSize = selectedPeople = null;
   document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
   renderCards(activities);
+  countActiveFilters();
+  if (filtersOpen) {
+    filtersOpen = false;
+    filtersPanel.classList.add("hidden");
+    updateToggleButton();
+  }
 };
 
-// Render cards
+// Render
 function renderCards(list) {
   cardsContainer.innerHTML = "";
   if (!list.length) {
@@ -279,10 +330,9 @@ function openModal(activity) {
   modal.style.display = "block";
 }
 
-// Filtrado (igual que antes)
+// Filtrado
 function applyFilters() {
   let result = activities.filter(a => {
-
     if (selectedAge !== null && !a.ages.includes(selectedAge)) return false;
 
     if (selectedTime !== null) {
@@ -307,7 +357,9 @@ function applyFilters() {
   });
 
   renderCards(result);
+  countActiveFilters();
 }
 
 // Inicial
+updateToggleButton();
 renderCards(activities);
