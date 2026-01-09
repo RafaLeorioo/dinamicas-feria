@@ -11,18 +11,25 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* HEADER - Logo más grande y menos margen vertical */
 header {
   background: #4A90E2;
   color: #fff;
-  padding: 32px 20px;
+  padding: 20px 20px; /* Reducido de 32px a 20px arriba/abajo */
   text-align: center;
   border-bottom: 4px solid #f4c842;
+  /* Altura fija opcional para mantener consistencia */
+  min-height: 120px; /* Ajusta si quieres controlar la altura total exacta */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-  max-height: 80px;
-  margin-bottom: 10px;
+  max-height: 100px; /* Más grande que antes (era 80px) */
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 /* BOTÓN TOGGLE FILTROS */
