@@ -162,99 +162,93 @@ const peopleOptions = [
   { label: "2 feriantes", value: "2" }
 ];
 
-// Valores activos (solo uno por categoría)
-let selectedAge = null;
-let selectedTime = null;
-let selectedSize = null;
-let selectedPeople = null;
+// Conjuntos de filtros seleccionados
+let selectedAges = new Set();
+let selectedTimes = new Set();
+let selectedSizes = new Set();
+let selectedPeople = new Set();
 
 const ageContainer = document.getElementById("ageButtons");
 const timeContainer = document.getElementById("timeButtons");
 const sizeContainer = document.getElementById("sizeButtons");
 const peopleContainer = document.getElementById("peopleButtons");
 const resetBtn = document.getElementById("resetBtn");
+const toggleBtn = document.getElementById("toggleBtn");
+const filtersSection = document.getElementById("filtersSection");
 const cardsContainer = document.getElementById("activities");
 const modal = document.getElementById("modal");
 const modalBody = document.getElementById("modal-body");
 const closeModal = document.querySelector(".close");
 
-// Función para desactivar todos los botones de un grupo
-function deactivateGroup(container) {
-  container.querySelectorAll("button").forEach(b => b.classList.remove("active"));
-}
+// ===== CREACIÓN DE BOTONES =====
 
-// Botones edad
 ageOptions.forEach(age => {
   const btn = document.createElement("button");
   btn.textContent = age;
   btn.onclick = () => {
-    deactivateGroup(ageContainer);
-    btn.classList.add("active");
-    selectedAge = age;
+    btn.classList.toggle("active");
+    if (btn.classList.contains("active")) selectedAges.add(age);
+    else selectedAges.delete(age);
     applyFilters();
   };
   ageContainer.appendChild(btn);
 });
 
-// Botones duración
 timeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
   btn.onclick = () => {
-    deactivateGroup(timeContainer);
-    btn.classList.add("active");
-    selectedTime = opt.value;
+    btn.classList.toggle("active");
+    if (btn.classList.contains("active")) selectedTimes.add(opt.value);
+    else selectedTimes.delete(opt.value);
     applyFilters();
   };
   timeContainer.appendChild(btn);
 });
 
-// Botones alumnos
 sizeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
   btn.onclick = () => {
-    deactivateGroup(sizeContainer);
-    btn.classList.add("active");
-    selectedSize = opt.value;
+    btn.classList.toggle("active");
+    if (btn.classList.contains("active")) selectedSizes.add(opt.value);
+    else selectedSizes.delete(opt.value);
     applyFilters();
   };
   sizeContainer.appendChild(btn);
 });
 
-// Botones feriantes
 peopleOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
   btn.onclick = () => {
-    deactivateGroup(peopleContainer);
-    btn.classList.add("active");
-    selectedPeople = opt.value;
+    btn.classList.toggle("active");
+    if (btn.classList.contains("active")) selectedPeople.add(opt.value);
+    else selectedPeople.delete(opt.value);
     applyFilters();
   };
   peopleContainer.appendChild(btn);
 });
 
-// Reset
+// ===== BOTONES DE CONTROL =====
+
 resetBtn.onclick = () => {
-  deactivateGroup(ageContainer);
-  deactivateGroup(timeContainer);
-  deactivateGroup(sizeContainer);
-  deactivateGroup(peopleContainer);
-  selectedAge = selectedTime = selectedSize = selectedPeople = null;
+  document.querySelectorAll(".button-group button.active").forEach(b => b.classList.remove("active"));
+  selectedAges.clear();
+  selectedTimes.clear();
+  selectedSizes.clear();
+  selectedPeople.clear();
   renderCards(activities);
 };
 
-// ===== MODAL =====
-closeModal.onclick = () => {
-  modal.style.display = "none";
+toggleBtn.onclick = () => {
+  filtersSection.classList.toggle("minimized");
+  toggleBtn.textContent = filtersSection.classList.contains("minimized") ? "Maximizar" : "Minimizar";
 };
 
-window.onclick = (event) => {
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
+// ===== MODAL =====
+closeModal.onclick = () => modal.style.display = "none";
+window.onclick = (event) => { if (event.target === modal) modal.style.display = "none"; };
 
 function openModal(activity) {
   modalBody.innerHTML = `
@@ -272,11 +266,10 @@ function openModal(activity) {
 }
 
 // ===== RENDER =====
-
 function renderCards(list) {
   cardsContainer.innerHTML = "";
   if (!list.length) {
-    cardsContainer.innerHTML = "<p>No hay dinámicas que cumplan los filtros.</p>";
+    cardsContainer.innerHTML = "<p style='text-align:center; color:#888; grid-column: 1 / -1;'>No hay dinámicas que cumplan los filtros seleccionados.</p>";
     return;
   }
 
@@ -298,39 +291,41 @@ function renderCards(list) {
   });
 }
 
-// ===== FILTRADO =====
-
+// ===== FILTRADO ESTRICTO (AND dentro de cada categoría) =====
 function applyFilters() {
   let result = activities.filter(a => {
 
-    // Edad
-    if (selectedAge !== null && !a.ages.includes(selectedAge)) {
-      return false;
+    // Edad: debe incluir TODAS las edades seleccionadas
+    if (selectedAges.size > 0) {
+      for (let age of selectedAges) {
+        if (!a.ages.includes(age)) return false;
+      }
     }
 
-    // Duración
-    if (selectedTime !== null) {
+    // Duración: debe cumplir TODOS los rangos seleccionados
+    if (selectedTimes.size > 0) {
       const dur = a.duration;
-      const isShort = dur <= 3;
-      const isMedium = dur >= 4 && dur <= 7;
-      const isLong = dur >= 8;
-
-      if (selectedTime === "short" && !isShort) return false;
-      if (selectedTime === "medium" && !isMedium) return false;
-      if (selectedTime === "long" && !isLong) return false;
+      for (let range of selectedTimes) {
+        if (range === "short" && !(dur <= 3)) return false;
+        if (range === "medium" && !(dur >= 4 && dur <= 7)) return false;
+        if (range === "long" && !(dur >= 8)) return false;
+      }
     }
 
-    // Alumnos
-    if (selectedSize !== null && a.maxStudents > selectedSize) {
-      return false;
+    // Máx. alumnos: debe ser ≤ al valor MÁS RESTRICTIVO (el menor seleccionado)
+    if (selectedSizes.size > 0) {
+      const minAllowed = Math.min(...selectedSizes);
+      if (a.maxStudents > minAllowed) return false;
     }
 
-    // Feriantes
-    if (selectedPeople !== null) {
+    // Feriantes: debe soportar TODOS los números seleccionados
+    if (selectedPeople.size > 0) {
       const hasOne = a.people.includes("1");
       const hasTwo = a.people.includes("2");
-      if (selectedPeople === "1" && !hasOne) return false;
-      if (selectedPeople === "2" && !hasTwo) return false;
+      for (let p of selectedPeople) {
+        if (p === "1" && !hasOne) return false;
+        if (p === "2" && !hasTwo) return false;
+      }
     }
 
     return true;

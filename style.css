@@ -32,24 +32,44 @@ header {
   filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* FILTROS - Una sola línea horizontal centrada en pantallas grandes */
+/* FILTROS */
 .filters {
   background: #ffffff;
   padding: 20px;
   border-bottom: 1px solid #eee;
-  display: flex;
-  flex-wrap: nowrap;         /* Forzamos una sola línea */
-  align-items: end;
-  gap: 24px;                 /* Espacio equilibrado entre grupos */
-  justify-content: center;
-  overflow-x: auto;          /* Scroll horizontal sutil si la pantalla es ultra-estrecha */
-  padding-bottom: 24px;
+  transition: all 0.4s ease;
 }
 
-/* Cada grupo ocupa lo justo */
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filters-content {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: end;
+  gap: 24px;
+  justify-content: center;
+  overflow-x: auto;
+  padding-bottom: 24px;
+  transition: all 0.4s ease;
+}
+
+.filters.minimized .filters-content {
+  max-height: 0;
+  overflow: hidden;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+/* Cada grupo */
 .filter-group {
   flex: 0 1 auto;
-  min-width: 160px;          /* Un poco más compacto para ayudar a que quepa todo */
+  min-width: 160px;
 }
 
 .filter-group h3 {
@@ -63,12 +83,12 @@ header {
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;                  /* Gap un poco más pequeño para ganar espacio */
+  gap: 7px;
   justify-content: center;
 }
 
 .button-group button {
-  padding: 7px 11px;         /* Botones ligeramente más compactos (sin perder legibilidad) */
+  padding: 7px 11px;
   border: 2px solid #4a6cf7;
   background: #ffffff;
   color: #4a6cf7;
@@ -94,8 +114,8 @@ header {
   box-shadow: 0 4px 8px rgba(255,214,10,0.3);
 }
 
-/* Botón reset - integrado en la fila */
-.reset {
+/* Botones de control */
+.reset, #toggleBtn {
   background: #ff6b6b;
   color: white;
   border: none;
@@ -104,28 +124,35 @@ header {
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-  align-self: flex-end;
-  height: fit-content;
   white-space: nowrap;
+  margin-left: 8px;
 }
 
-.reset:hover {
+.reset:hover, #toggleBtn:hover {
   background: #ff5252;
   transform: translateY(-2px);
   box-shadow: 0 6px 12px rgba(255,107,107,0.3);
 }
 
-/* RESPONSIVE: Vertical en pantallas ≤1100px */
+#toggleBtn {
+  background: #7b68ee;
+}
+
+#toggleBtn:hover {
+  background: #6a5acd;
+}
+
+/* RESPONSIVE */
 @media (max-width: 1100px) {
-  .filters {
-    flex-wrap: wrap;         /* Permite wrap en portátiles medianos */
+  .filters-content {
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
   }
 }
 
 @media (max-width: 900px) {
-  .filters {
+  .filters-content {
     flex-direction: column;
     align-items: stretch;
     gap: 16px;
@@ -134,13 +161,9 @@ header {
   .filter-group {
     min-width: auto;
   }
-  
-  .reset {
-    align-self: stretch;
-  }
 }
 
-/* TARJETAS (sin cambios) */
+/* TARJETAS */
 .cards {
   padding: 22px;
   display: grid;

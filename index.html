@@ -13,30 +13,36 @@
   <img src="logo.png" alt="Logo" class="logo">
 </header>
 
-<section class="filters">
-
-  <div class="filter-group">
-    <h3>Curso / Edad</h3>
-    <div id="ageButtons" class="button-group"></div>
+<section class="filters" id="filtersSection">
+  <div class="filters-header">
+    <h3 style="margin: 0; color: #4a6cf7; font-size: 1.1rem;">Filtros</h3>
+    <div>
+      <button id="toggleBtn" class="reset">Minimizar</button>
+      <button id="resetBtn" class="reset">Limpiar filtros</button>
+    </div>
   </div>
 
-  <div class="filter-group">
-    <h3>Duración</h3>
-    <div id="timeButtons" class="button-group"></div>
+  <div class="filters-content" id="filtersContent">
+    <div class="filter-group">
+      <h3>Curso / Edad</h3>
+      <div id="ageButtons" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Duración</h3>
+      <div id="timeButtons" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Máx. alumnos</h3>
+      <div id="sizeButtons" class="button-group"></div>
+    </div>
+
+    <div class="filter-group">
+      <h3>Feriantes</h3>
+      <div id="peopleButtons" class="button-group"></div>
+    </div>
   </div>
-
-  <div class="filter-group">
-    <h3>Máx. alumnos</h3>
-    <div id="sizeButtons" class="button-group"></div>
-  </div>
-
-  <div class="filter-group">
-    <h3>Feriantes</h3>
-    <div id="peopleButtons" class="button-group"></div>
-  </div>
-
-  <button id="resetBtn" class="reset">Limpiar filtros</button>
-
 </section>
 
 <main id="activities" class="cards"></main>
