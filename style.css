@@ -35,7 +35,7 @@ header {
 /* FILTROS */
 .filters {
   background: #ffffff;
-  padding: 40px 20px 50px;
+  padding: 30px 20px 40px;
   border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: column;
@@ -44,19 +44,19 @@ header {
 
 .filters-content {
   display: flex;
-  flex-wrap: nowrap; /* Fuerza una sola fila */
+  flex-wrap: nowrap;
   justify-content: center;
   gap: 50px;
   max-width: 100%;
   width: 100%;
-  overflow-x: auto; /* Scroll horizontal solo si es imprescindible */
-  padding: 0 20px;
+  overflow-x: auto;
+  padding: 0 10px;
   transition: all 0.4s ease;
 }
 
 .filter-group {
   flex: 0 1 auto;
-  min-width: 240px;
+  min-width: 220px;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ header {
   font-size: 1rem;
   font-weight: 700;
   color: #4a6cf7;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .button-group {
@@ -75,13 +75,13 @@ header {
 }
 
 .button-group button {
-  padding: 8px 14px;
+  padding: 7px 12px;
   border: 2px solid #4a6cf7;
   background: #ffffff;
   color: #4a6cf7;
   border-radius: 30px;
   cursor: pointer;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -100,17 +100,17 @@ header {
   box-shadow: 0 4px 8px rgba(255,214,10,0.3);
 }
 
-/* Controles debajo */
+/* Controles */
 .filters-controls {
-  margin-top: 40px;
+  margin-top: 30px;
   display: flex;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .toggle-btn, .reset {
-  padding: 10px 20px;
+  padding: 9px 18px;
   border: none;
   border-radius: 30px;
   cursor: pointer;
@@ -119,6 +119,7 @@ header {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 0.95rem;
 }
 
 .toggle-btn {
@@ -143,7 +144,7 @@ header {
   font-size: 1.2em;
 }
 
-/* Minimizar contenido */
+/* Minimizar */
 .filters.minimized .filters-content {
   max-height: 0;
   overflow: hidden;
@@ -153,38 +154,71 @@ header {
   margin: 0;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1400px) {
+/* RESPONSIVE: optimizado para móvil */
+@media (max-width: 768px) {
+  .filters {
+    padding: 20px 15px 30px;
+  }
+
   .filters-content {
-    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    overflow-x: visible;
+  }
+
+  .filter-group {
+    min-width: auto;
+    width: 100%;
+    max-width: 340px;
+  }
+
+  .filter-group h3 {
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+  }
+
+  .button-group {
+    gap: 7px;
+  }
+
+  .button-group button {
+    padding: 6px 11px;
+    font-size: 0.8rem;
+  }
+
+  .filters-controls {
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .toggle-btn, .reset {
+    padding: 8px 16px;
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 1200px) {
+/* Wrap a 2 columnas en tablets */
+@media (min-width: 769px) and (max-width: 1200px) {
   .filters-content {
     flex-wrap: wrap;
-    justify-content: center;
+    gap: 30px;
   }
   .filter-group {
     flex: 1 1 45%;
   }
 }
 
-@media (max-width: 768px) {
+/* Una fila en pantallas grandes */
+@media (min-width: 1201px) {
   .filters-content {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-  }
-  .filter-group {
-    flex: 1 1 auto;
-    min-width: auto;
-    width: 100%;
-    max-width: 400px;
+    flex-wrap: nowrap;
+    gap: 60px;
   }
 }
 
-/* TARJETAS */
+/* TARJETAS y MODAL (sin cambios relevantes) */
 .cards {
   padding: 22px;
   display: grid;
@@ -246,7 +280,6 @@ header {
   box-shadow: 0 6px 15px rgba(74,108,247,0.3);
 }
 
-/* MODAL */
 .modal {
   display: none;
   position: fixed;
