@@ -11,159 +11,136 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER - Logo más grande y menos margen vertical */
+/* HEADER */
 header {
-  background: #4A90E2;
-  color: #fff;
-  padding: 20px 20px; /* Reducido de 32px a 20px arriba/abajo */
+  background: linear-gradient(135deg, #4a6cf7, #7b68ee);
+  color: white;
+  padding: 18px 20px;
   text-align: center;
-  border-bottom: 4px solid #f4c842;
-  /* Altura fija opcional para mantener consistencia */
-  min-height: 120px; /* Ajusta si quieres controlar la altura total exacta */
+  border-bottom: 6px solid #ffd60a;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .logo {
-  max-height: 100px; /* Más grande que antes (era 80px) */
-  width: auto;
+  max-height: 120px;
   height: auto;
-  object-fit: contain;
+  width: auto;
+  margin: 0;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
 }
 
-/* BOTÓN TOGGLE FILTROS */
-.filters-toggle {
-  padding: 12px 20px;
-  background: #f9f9f9;
-  border-bottom: 1px solid #eee;
-  text-align: center;
-}
-
-#toggleFiltersBtn {
-  background: #4A90E2;
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-#toggleFiltersBtn:hover {
-  background: #357abd;
-}
-
-.active-count {
-  background: #f4c842;
-  color: #0c1a4b;
-  font-size: 0.8rem;
-  padding: 2px 8px;
-  border-radius: 12px;
-  font-weight: bold;
-}
-
-/* PANEL DE FILTROS */
-.filters-panel {
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-  overflow: hidden;
-  transition: max-height 0.4s ease, padding 0.4s ease;
-  max-height: 600px;
-  padding: 20px;
-}
-
-.filters-panel.hidden {
-  max-height: 0;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
+/* FILTROS - Una sola línea horizontal centrada en pantallas grandes */
 .filters {
+  background: #ffffff;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  flex-wrap: nowrap;         /* Forzamos una sola línea */
+  align-items: end;
+  gap: 24px;                 /* Espacio equilibrado entre grupos */
   justify-content: center;
+  overflow-x: auto;          /* Scroll horizontal sutil si la pantalla es ultra-estrecha */
+  padding-bottom: 24px;
 }
 
-@media (min-width: 768px) {
-  .filters {
-    justify-content: space-between;
-  }
+/* Cada grupo ocupa lo justo */
+.filter-group {
+  flex: 0 1 auto;
+  min-width: 160px;          /* Un poco más compacto para ayudar a que quepa todo */
 }
 
 .filter-group h3 {
   font-size: 0.9rem;
   font-weight: 600;
-  color: #4A90E2;
+  color: #4a6cf7;
   margin-bottom: 8px;
   text-align: center;
-}
-
-@media (min-width: 768px) {
-  .filter-group h3 {
-    text-align: left;
-  }
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 7px;                  /* Gap un poco más pequeño para ganar espacio */
   justify-content: center;
 }
 
-@media (min-width: 768px) {
-  .button-group {
-    justify-content: flex-start;
-  }
-}
-
 .button-group button {
-  padding: 8px 12px;
-  border: 1px solid #4A90E2;
+  padding: 7px 11px;         /* Botones ligeramente más compactos (sin perder legibilidad) */
+  border: 2px solid #4a6cf7;
   background: #ffffff;
-  color: #4A90E2;
-  border-radius: 8px;
+  color: #4a6cf7;
+  border-radius: 12px;
   cursor: pointer;
   font-size: 0.85rem;
-  transition: 0.2s;
+  font-weight: 600;
+  transition: all 0.3s ease;
   white-space: nowrap;
 }
 
 .button-group button:hover {
-  background: #4A90E2;
+  background: #4a6cf7;
   color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74,108,247,0.2);
 }
 
 .button-group button.active {
-  background: #f4c842;
-  color: #4A90E2;
-  border-color: #f4c842;
+  background: #ffd60a;
+  color: #4a6cf7;
+  border-color: #ffd60a;
+  box-shadow: 0 4px 8px rgba(255,214,10,0.3);
 }
 
+/* Botón reset - integrado en la fila */
 .reset {
-  background: #f44336;
+  background: #ff6b6b;
   color: white;
   border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
+  padding: 10px 14px;
+  border-radius: 12px;
   cursor: pointer;
   font-weight: 600;
-  margin-top: 12px;
-  align-self: center;
+  transition: all 0.3s ease;
+  align-self: flex-end;
+  height: fit-content;
+  white-space: nowrap;
 }
 
 .reset:hover {
-  background: #c62828;
+  background: #ff5252;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255,107,107,0.3);
 }
 
-/* TARJETAS */
+/* RESPONSIVE: Vertical en pantallas ≤1100px */
+@media (max-width: 1100px) {
+  .filters {
+    flex-wrap: wrap;         /* Permite wrap en portátiles medianos */
+    gap: 20px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 900px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+  
+  .filter-group {
+    min-width: auto;
+  }
+  
+  .reset {
+    align-self: stretch;
+  }
+}
+
+/* TARJETAS (sin cambios) */
 .cards {
   padding: 22px;
   display: grid;
@@ -173,30 +150,30 @@ header {
 
 .card {
   background: #ffffff;
-  border-radius: 14px;
-  border: 1px solid #eee;
-  box-shadow: 0 6px 14px rgba(0,0,0,0.07);
+  border-radius: 18px;
+  border: none;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   padding: 18px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 22px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: 0 16px 30px rgba(74,108,247,0.15);
 }
 
 .card h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #4A90E2;
+  color: #4a6cf7;
   margin-bottom: 10px;
 }
 
 .label {
   font-weight: 600;
-  color: #4A90E2;
+  color: #7b68ee;
   font-size: 0.88rem;
 }
 
@@ -204,22 +181,26 @@ header {
   font-size: 0.88rem;
   margin: 6px 0;
   flex-grow: 1;
+  color: #444;
 }
 
 .more-info-btn {
   margin-top: 12px;
-  padding: 8px 12px;
-  background: #4A90E2;
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #4a6cf7, #7b68ee);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 12px;
   cursor: pointer;
-  font-weight: 600;
   align-self: flex-start;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .more-info-btn:hover {
-  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(74,108,247,0.3);
 }
 
 /* MODAL */
@@ -231,48 +212,48 @@ header {
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0,0,0,0.5);
   align-items: center;
   justify-content: center;
 }
 
 .modal-content {
-  background-color: #fefefe;
-  margin: 5% auto;
-  padding: 24px;
-  border-radius: 14px;
+  background: white;
+  border-radius: 18px;
+  max-width: 500px;
   width: 90%;
-  max-width: 600px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
   position: relative;
+  box-shadow: 0 15px 35px rgba(74,108,247,0.2);
 }
 
 .close {
   position: absolute;
-  top: 10px;
-  right: 16px;
-  color: #aaa;
+  top: 12px;
+  right: 18px;
   font-size: 28px;
   font-weight: bold;
+  color: #aaa;
   cursor: pointer;
 }
 
 .close:hover {
-  color: #000;
+  color: #4a6cf7;
 }
 
-.modal-content h2 {
-  color: #4A90E2;
+#modal-body h2 {
+  color: #4a6cf7;
   margin-bottom: 16px;
 }
 
-.modal-content p {
+#modal-body p {
   margin: 10px 0;
+  color: #444;
 }
 
-.modal-content hr {
-  margin: 16px 0;
-  border: none;
-  border-top: 1px solid #eee;
+#modal-body div {
+  line-height: 1.7;
+  color: #444;
 }

@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <title>Banco de Dinámicas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- FAVICON PERSONALIZADO - Cambia "favicon.ico" por tu archivo -->
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -14,50 +13,39 @@
   <img src="logo.png" alt="Logo" class="logo">
 </header>
 
-<div class="filters-toggle">
-  <button id="toggleFiltersBtn">
-    <span id="toggleText">Filtros</span>
-    <span id="toggleIcon">▼</span>
-    <span id="activeCount" class="active-count"></span>
-  </button>
-</div>
+<section class="filters">
 
-<section id="filtersPanel" class="filters-panel hidden">
-  <div class="filters">
-
-    <div class="filter-group">
-      <h3>Curso / Edad</h3>
-      <div id="ageButtons" class="button-group"></div>
-    </div>
-
-    <div class="filter-group">
-      <h3>Duración</h3>
-      <div id="timeButtons" class="button-group"></div>
-    </div>
-
-    <div class="filter-group">
-      <h3>Máx. alumnos</h3>
-      <div id="sizeButtons" class="button-group"></div>
-    </div>
-
-    <div class="filter-group">
-      <h3>Feriantes</h3>
-      <div id="peopleButtons" class="button-group"></div>
-    </div>
-
-    <button id="resetBtn" class="reset">Limpiar filtros</button>
-
+  <div class="filter-group">
+    <h3>Curso / Edad</h3>
+    <div id="ageButtons" class="button-group"></div>
   </div>
+
+  <div class="filter-group">
+    <h3>Duración</h3>
+    <div id="timeButtons" class="button-group"></div>
+  </div>
+
+  <div class="filter-group">
+    <h3>Máx. alumnos</h3>
+    <div id="sizeButtons" class="button-group"></div>
+  </div>
+
+  <div class="filter-group">
+    <h3>Feriantes</h3>
+    <div id="peopleButtons" class="button-group"></div>
+  </div>
+
+  <button id="resetBtn" class="reset">Limpiar filtros</button>
+
 </section>
 
 <main id="activities" class="cards"></main>
 
-<!-- Modal para más información -->
+<!-- Modal -->
 <div id="modal" class="modal">
   <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <div id="modalBody"></div>
+    <span class="close">×</span>
+    <div id="modal-body"></div>
   </div>
 </div>
 

@@ -7,11 +7,9 @@ const activities = [
     people: "1 o 2 feriantes",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: "Lectura teatralizada donde el alumnado repite la última palabra en forma de eco. En 'Como tú, como yo' se repiten las palabras en mayúsculas de cada página.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-La persona dinamizadora inicia la lectura del cuento elegido, poniendo especial énfasis en determinadas palabras clave.<br><br>
-La dinámica consiste en que las criaturas repitan en forma de “eco” la última palabra que dice la persona dinamizadora, justo después de que esta haga una pequeña pausa.<br><br>
-En el cuento <em>Como tú, como yo</em>, cada página contiene una palabra escrita en mayúsculas. La persona dinamizadora deberá leerla, detenerse y permitir que las criaturas la repitan en voz alta.<br><br>
+    fullDescription: `Desarrollo de la actividad
+La persona dinamizadora inicia la lectura del cuento elegido, poniendo especial énfasis en determinadas palabras clave. La dinámica consiste en que las criaturas repitan en forma de “eco” la última palabra que dice la persona dinamizadora, justo después de que esta haga una pequeña pausa.
+En el cuento Como tú, como yo, cada página contiene una palabra escrita en mayúsculas. La persona dinamizadora deberá leerla, detenerse y permitir que las criaturas la repitan en voz alta.
 La clave está en realizarlo de manera muy teatralizada: variando la voz, el volumen, el ritmo y la intención para mantener la atención del grupo y generar un ambiente dinámico y divertido.`
   },
   {
@@ -22,14 +20,12 @@ La clave está en realizarlo de manera muy teatralizada: variando la voz, el vol
     people: "1 o 2 feriantes",
     maxStudents: 50,
     visit: "20 min (7' + 13')",
-    description: "Mientras se narra el cuento se mueven libremente. Cuando la narración se detiene, todos se congelan. Variante: representar emociones cuando aparecen en el cuento.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Las niñas y niños se colocan de pie dentro del espacio delimitado, recordando que no deben salir de él.<br><br>
-Mientras la persona dinamizadora narra un cuento, pueden moverse libremente. Cuando la lectura se detenga, todas las criaturas —incluida la persona que guía— deben quedarse completamente congeladas hasta que la narración continúe.<br><br>
-<strong>Variante con El primer libro de las emociones</strong><br><br>
-En esta versión, la persona dinamizadora se detiene cada vez que en el cuento aparece una emoción. En ese momento, todos deben congelarse e interpretar corporal y facialmente esa emoción.<br><br>
-Ejemplo:<br>
-Si se lee “… alegría” y se hace una pausa, las criaturas deben mostrar una expresión de alegría. Si luego aparece “miedo”, se repite el proceso mostrando esa emoción. La dinámica continúa así hasta el final del cuento.`
+    fullDescription: `Desarrollo de la actividad
+Las niñas y niños se colocan de pie dentro del espacio delimitado, recordando que no deben salir de él. Mientras la persona dinamizadora narra un cuento, pueden moverse libremente. Cuando la lectura se detenga, todas las criaturas —incluida la persona que guía— deben quedarse completamente congeladas hasta que la narración continúe.
+
+Variante con El primer libro de las emociones
+En esta versión, la persona dinamizadora se detiene cada vez que en el cuento aparece una emoción. En ese momento, todos deben congelarse e interpretar corporal y facialmente esa emoción.
+Ejemplo: Si se lee “… alegría” y se hace una pausa, las criaturas deben mostrar una expresión de alegría. Si luego aparece “miedo”, se repite el proceso mostrando esa emoción. La dinámica continúa así hasta el final del cuento.`
   },
   {
     title: "Finales locos",
@@ -39,19 +35,17 @@ Si se lee “… alegría” y se hace una pausa, las criaturas deben mostrar un
     people: "2 feriantes",
     maxStudents: 50,
     visit: "30 min (15' + 15')",
-    description: "Se cuenta un cuento clásico con huecos que el alumnado completa con ideas absurdas. Favorece creatividad y participación.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-“Finales Locos” es una dinámica donde se cuenta un cuento clásico y el alumnado lo transforma con ideas disparatadas. Favorece creatividad y participación.<br><br>
-<strong>Inicio:</strong><br>
-Con un tono cercano (no infantil), el dinamizador/a explica: “Contaré un cuento conocido y vosotros completaréis los huecos con ideas locas.” (Mejor en círculo). Podemos usar cuentos presentes en la feria.<br><br>
-Se anuncia el cuento, se narra haciendo pausas y cada alumno aporta una palabra u ocurrencia. El dinamizador/a la integra y continúa.<br><br>
-Ejemplo:<br>
-“Caperucita vivía con su… (pausa)” → perro<br>
-“El perro se llamaba… (pausa)” → Eustaquio<br><br>
-El dinamizador/a mantiene ritmo, humor y cohesión.<br><br>
-• Los detalles absurdos funcionan con los grupos más mayores.<br>
-• Mantén humor y agilidad<br>
-• Evita censurar ideas`
+    fullDescription: `Desarrollo de la actividad
+“Finales Locos” es una dinámica donde se cuenta un cuento clásico y el alumnado lo transforma con ideas disparatadas. Favorece creatividad y participación.
+
+Inicio: Con un tono cercano (no infantil), el dinamizador/a explica: “Contaré un cuento conocido y vosotros completaréis los huecos con ideas locas.” (Mejor en círculo).
+Podemos usar cuentos presentes en la feria. Se anuncia el cuento, se narra haciendo pausas y cada alumno aporta una palabra u ocurrencia. El dinamizador/a la integra y continúa.
+Ejemplo: “Caperucita vivía con su… (pausa)” → perro “El perro se llamaba… (pausa)” → Eustaquio
+El dinamizador/a mantiene ritmo, humor y cohesión.
+
+* Los detalles absurdos funcionan con los grupos más mayores.
+* Mantén humor y agilidad
+* Evita censurar ideas`
   },
   {
     title: "Preguntas y respuestas",
@@ -61,13 +55,10 @@ El dinamizador/a mantiene ritmo, humor y cohesión.<br><br>
     people: "2 feriantes",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: "Juego de preguntas por categorías: personajes, títulos y vocabulario. Posibilidad de rebote si fallan.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Proponemos al grupo jugar a un juego de preguntas y respuestas literarias.<br><br>
-Dispondremos de varias tarjetas clasificadas en tres categorías: PERSONAJES, TÍTULOS y VOCABULARIO.<br><br>
-Iremos lanzando preguntas de las distintas categorías y, en función del tiempo disponible, podremos formular más o menos ítems.<br><br>
-El alumnado deberá levantar la mano para pedir turno antes de responder.<br><br>
-Además, podemos incorporar la opción de “rebote”: si una persona da una respuesta incorrecta, otra compañera u otro compañero podrá intentar responderla.`
+    fullDescription: `Desarrollo de la actividad
+Proponemos al grupo jugar a un juego de preguntas y respuestas literarias. Dispondremos de varias tarjetas clasificadas en tres categorías: PERSONAJES, TÍTULOS y VOCABULARIO.
+Iremos lanzando preguntas de las distintas categorías y, en función del tiempo disponible, podremos formular más o menos ítems.
+El alumnado deberá levantar la mano para pedir turno antes de responder. Además, podemos incorporar la opción de “rebote”: si una persona da una respuesta incorrecta, otra compañera u otro compañero podrá intentar responderla.`
   },
   {
     title: "Cuento invisible",
@@ -77,16 +68,9 @@ Además, podemos incorporar la opción de “rebote”: si una persona da una re
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: "Se inventa un cuento haciendo preguntas al grupo para construirlo juntos, conectándolo con libros reales de la feria.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Nos colocamos delante del grupo y nos sentamos con ellos/as. Comenzamos a narrar una historia imaginaria, haciéndoles preguntas e invitándoles a participar:<br><br>
-“¿Sabéis qué es esto?” (hacemos como si estuviéramos enseñando un cuento).<br>
-“Es un cuento… ¿cómo es, grande o pequeño?”<br>
-“¿De qué color es?”<br>
-“¿Qué tiene en la portada?”<br>
-“Cuenta la historia de ____ y ____.”<br><br>
-Podemos aprovechar para enlazarlo con algún cuento de los que tengamos en la feria si la historia se asemeja a alguno, o incluso, intentar dirigir la historia para que el libro invisible sea alguno de la feria.<br><br>
-De esta manera, les despertamos interés para que vayan a leerlo.`
+    fullDescription: `Desarrollo de la actividad
+Nos colocamos delante del grupo y nos sentamos con ellos/as. Comenzamos a narrar una historia imaginaria, haciéndoles preguntas e invitándoles a participar: “¿Sabéis qué es esto?” (hacemos como si estuviéramos enseñando un cuento). “Es un cuento… ¿cómo es, grande o pequeño?” “¿De qué color es?” “¿Qué tiene en la portada?” “Cuenta la historia de ____ y ____.”
+Podemos aprovechar para enlazarlo con algún cuento de los que tengamos en la feria si la historia se asemeja a alguno, o incluso, intentar dirigir la historia para que el libro invisible sea alguno de la feria. De esta manera, les despertamos interés para que vayan a leerlo.`
   },
   {
     title: "¿Quién ganaría?",
@@ -96,17 +80,14 @@ De esta manera, les despertamos interés para que vayan a leerlo.`
     people: "2 feriantes",
     maxStudents: 50,
     visit: "20 min (10' + 10')",
-    description: "Se comparan dos personajes en diferentes pruebas. El grupo se mueve hacia el lado del personaje que creen que ganaría.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Animamos al grupo a decir dos personajes de libros, personajes animados...<br><br>
-Usaremos estos dos personajes para lanzarles preguntas con la premisa: “¿Quién ganaría…?”<br><br>
-Por ejemplo, imaginemos que han elegido a Spiderman y un león. Las preguntas que podemos hacer serían:<br>
-¿Quién ganaría en una competición de natación?<br>
-¿Quién ganaría en una carrera de obstáculos?<br>
-¿Quién ganaría encontrando un objeto escondido en el menor tiempo?<br>
-¿Quién ganaría contando una historia divertida sin reírse?<br><br>
-Como dinamizadores, marcamos que nuestra derecha corresponde a un personaje y nuestra izquierda al otro.<br><br>
-En cada pregunta, el grupo deberá moverse hacia el lado del personaje que crean que ganaría.`
+    fullDescription: `Desarrollo de la actividad
+Animamos al grupo a decir dos personajes de libros, personajes animados... Usaremos estos dos personajes para lanzarles preguntas con la premisa: “¿Quién ganaría…?”
+Por ejemplo, imaginemos que han elegido a Spiderman y un león. Las preguntas que podemos hacer serían:
+¿Quién ganaría en una competición de natación?
+¿Quién ganaría en una carrera de obstáculos?
+¿Quién ganaría encontrando un objeto escondido en el menor tiempo?
+¿Quién ganaría contando una historia divertida sin reírse?
+Como dinamizadores, marcamos que nuestra derecha corresponde a un personaje y nuestra izquierda al otro. En cada pregunta, el grupo deberá moverse hacia el lado del personaje que crean que ganaría.`
   },
   {
     title: "¿Qué preferirías?",
@@ -116,17 +97,16 @@ En cada pregunta, el grupo deberá moverse hacia el lado del personaje que crean
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    description: "Elección entre dos opciones de personajes o situaciones, enlazando con libros disponibles en la feria.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Una vez estamos con el grupo, les proponemos situaciones en las que tienen que elegir.<br><br>
-Por ejemplo:<br>
-¿Qué preferiríais: que en un duelo de magia ganase Harry Potter o Draco Malfoy?<br>
-¿Qué preferiríais: que Sherlock Holmes resolviera un misterio en vuestro colegio o que lo resolviera la patrulla canina?<br>
-¿Qué preferiríais: vivir una aventura con Gerónimo Stilton o con Alicia en el País de las Maravillas?<br><br>
-Las últimas preguntas serán incluyendo personajes de los libros de la feria, del estilo:<br>
-- ¿Qué preferiríais: que os entrenara para una misión LadyBug o Spiderman? - ¿Sabéis que en nuestra feria podéis encontrar mangas de ladybug y cómics de spiderman?<br>
-- ¿Qué preferiríais: hacer una carrera contra un león o contra un dinosaurio? - Pues atentas y atentos, que también tenemos libros de animales y dinosaurios.<br>
-- ¿Qué preferiríais: viajar a una isla tropical siendo un animal o una veterinaria? - Pues os invito/invitamos a que paséis a la feria del libro y que viajéis a través de todas las historias y libros que podéis encontrar en ella.`
+    fullDescription: `Desarrollo de la actividad
+Una vez estamos con el grupo, les proponemos situaciones en las que tienen que elegir. Por ejemplo:
+¿Qué preferiríais: que en un duelo de magia ganase Harry Potter o Draco Malfoy?
+¿Qué preferiríais: que Sherlock Holmes resolviera un misterio en vuestro colegio o que lo resolviera la patrulla canina?
+¿Qué preferiríais: vivir una aventura con Gerónimo Stilton o con Alicia en el País de las Maravillas?
+Las últimas preguntas serán incluyendo personajes de los libros de la feria, del estilo:
+
+* ¿Qué preferiríais: que os entrenara para una misión LadyBug o Spiderman? - ¿Sabéis que en nuestra feria podéis encontrar mangas de ladybug y cómics de spiderman?
+* ¿Qué preferiríais: hacer una carrera contra un león o contra un dinosaurio? - Pues atentas y atentos, que también tenemos libros de animales y dinosaurios.
+* ¿Qué preferiríais: viajar a una isla tropical siendo un animal o una veterinaria? - Pues os invito/invitamos a que paséis a la feria del libro y que viajéis a través de todas las historias y libros que podéis encontrar en ella.`
   },
   {
     title: "El personaje secreto",
@@ -136,12 +116,11 @@ Las últimas preguntas serán incluyendo personajes de los libros de la feria, d
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    description: "Se dan pistas progresivas para adivinar un personaje de los libros de la feria.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-Pensaremos en un personaje de un libro de la feria, y vamos dando pistas progresivas al grupo hasta que adivinen de quién se trata.<br><br>
-Por ejemplo, si pensamos en un dinosaurio, las pistas podrían ser: Animal, extinto y algunos eran gigantes y otros pequeñitos.<br><br>
-Tienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acierten el personaje.<br><br>
-“Si solo con unas pistas habéis podido imaginar un personaje… ¡Imaginad todo lo que podréis descubrir entre libros!`
+    fullDescription: `Desarrollo de la actividad
+Pensaremos en un personaje de un libro de la feria, y vamos dando pistas progresivas al grupo hasta que adivinen de quién se trata.
+Por ejemplo, si pensamos en un dinosaurio, las pistas podrían ser: Animal, extinto y algunos eran gigantes y otros pequeñitos.
+Tienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acierten el personaje.
+“Si solo con unas pistas habéis podido imaginar un personaje… ¡Imaginad todo lo que podréis descubrir entre libros!”`
   },
   {
     title: "Una palabra",
@@ -151,16 +130,39 @@ Tienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acie
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    description: "Se dice un personaje y el alumnado responde con asociaciones rápidas de palabras.",
-    moreInfo: `<strong>Desarrollo de la actividad</strong><br><br>
-La persona dinamizadora prepara varios personajes conocidos por el alumnado (de cuentos, libros, series o dibujos). Los presenta en voz alta y con energía, por ejemplo: “¡Spiderman!”.<br><br>
-El grupo levanta la mano y se elige a alguien para decir una asociación rápida (“araña”, “mayas”, “telarañas”). Se pueden repetir varias veces las asociaciones con un mismo personaje antes de cambiar a otro, como “¡Bluey!”, generando respuestas como “azul” o “perro”.<br><br>
-Esta dinámica fomenta la atención, la rapidez mental, la participación y la asociación de ideas.<br><br>
-<strong>Aspectos a considerar:</strong><br>
+    fullDescription: `Desarrollo de la actividad
+La persona dinamizadora prepara varios personajes conocidos por el alumnado (de cuentos, libros, series o dibujos). Los presenta en voz alta y con energía, por ejemplo: “¡Spiderman!”.
+El grupo levanta la mano y se elige a alguien para decir una asociación rápida (“araña”, “mayas”, “telarañas”).
+Se pueden repetir varias veces las asociaciones con un mismo personaje antes de cambiar a otro, como “¡Bluey!”, generando respuestas como “azul” o “perro”.
+Esta dinámica fomenta la atención, la rapidez mental, la participación y la asociación de ideas.
+
+Aspectos a considerar:
 Adaptar los personajes a la edad del grupo (más infantiles para 1.º-2.º de Primaria y más variados para cursos mayores). La duración es flexible y depende del tiempo disponible y de la energía del grupo.`
   }
 ];
 
+// ===== FILTROS =====
+
+const ageOptions = ["Infantil", "1º", "2º", "3º", "4º", "5º", "6º"];
+
+const timeOptions = [
+  { label: "≤ 3 min", value: "short" },
+  { label: "4–7 min", value: "medium" },
+  { label: "8–15 min", value: "long" }
+];
+
+const sizeOptions = [
+  { label: "Hasta 50", value: 50 },
+  { label: "Hasta 75", value: 75 },
+  { label: "Hasta 100", value: 100 }
+];
+
+const peopleOptions = [
+  { label: "1 feriante", value: "1" },
+  { label: "2 feriantes", value: "2" }
+];
+
+// Valores activos (solo uno por categoría)
 let selectedAge = null;
 let selectedTime = null;
 let selectedSize = null;
@@ -172,123 +174,105 @@ const sizeContainer = document.getElementById("sizeButtons");
 const peopleContainer = document.getElementById("peopleButtons");
 const resetBtn = document.getElementById("resetBtn");
 const cardsContainer = document.getElementById("activities");
-
-// Modal
 const modal = document.getElementById("modal");
-const modalTitle = document.getElementById("modalTitle");
-const modalBody = document.getElementById("modalBody");
+const modalBody = document.getElementById("modal-body");
 const closeModal = document.querySelector(".close");
 
-closeModal.onclick = () => modal.style.display = "none";
-window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
-
-// Toggle filtros
-const toggleBtn = document.getElementById("toggleFiltersBtn");
-const toggleText = document.getElementById("toggleText");
-const toggleIcon = document.getElementById("toggleIcon");
-const activeCount = document.getElementById("activeCount");
-const filtersPanel = document.getElementById("filtersPanel");
-
-let filtersOpen = false;
-let activeFiltersCount = 0;
-
-function updateToggleButton() {
-  if (filtersOpen) {
-    toggleText.textContent = "Ocultar filtros";
-    toggleIcon.textContent = "▲";
-  } else {
-    toggleText.textContent = "Filtros";
-    toggleIcon.textContent = "▼";
-  }
-  activeCount.textContent = activeFiltersCount > 0 ? `(${activeFiltersCount})` : "";
-  activeCount.style.display = activeFiltersCount > 0 ? "inline" : "none";
+// Función para desactivar todos los botones de un grupo
+function deactivateGroup(container) {
+  container.querySelectorAll("button").forEach(b => b.classList.remove("active"));
 }
 
-function countActiveFilters() {
-  activeFiltersCount = 0;
-  if (selectedAge) activeFiltersCount++;
-  if (selectedTime) activeFiltersCount++;
-  if (selectedSize) activeFiltersCount++;
-  if (selectedPeople) activeFiltersCount++;
-  updateToggleButton();
-}
-
-toggleBtn.onclick = () => {
-  filtersOpen = !filtersOpen;
-  filtersPanel.classList.toggle("hidden");
-  updateToggleButton();
-};
-
-function activateSingleButton(groupContainer, selectedVar, value, apply = true) {
-  groupContainer.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
-  let changed = false;
-  if (selectedVar === value) {
-    selectedVar = null;
-    changed = true;
-  } else if (selectedVar !== value) {
-    selectedVar = value;
-    event.target.classList.add("active");
-    changed = true;
-  }
-  if (apply && changed) {
-    applyFilters();
-    countActiveFilters();
-    if (filtersOpen) {
-      filtersOpen = false;
-      filtersPanel.classList.add("hidden");
-      updateToggleButton();
-    }
-  }
-  return selectedVar;
-}
-
-// Botones
-const ageOptions = ["Infantil", "1º", "2º", "3º", "4º", "5º", "6º"];
-const timeOptions = [{ label: "≤ 3 min", value: "short" }, { label: "4–7 min", value: "medium" }, { label: "8–15 min", value: "long" }];
-const sizeOptions = [{ label: "Hasta 50", value: 50 }, { label: "Hasta 75", value: 75 }, { label: "Hasta 100", value: 100 }];
-const peopleOptions = [{ label: "1 feriante", value: "1" }, { label: "2 feriantes", value: "2" }];
-
+// Botones edad
 ageOptions.forEach(age => {
   const btn = document.createElement("button");
   btn.textContent = age;
-  btn.onclick = () => selectedAge = activateSingleButton(ageContainer, selectedAge, age);
+  btn.onclick = () => {
+    deactivateGroup(ageContainer);
+    btn.classList.add("active");
+    selectedAge = age;
+    applyFilters();
+  };
   ageContainer.appendChild(btn);
 });
 
+// Botones duración
 timeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = () => selectedTime = activateSingleButton(timeContainer, selectedTime, opt.value);
+  btn.onclick = () => {
+    deactivateGroup(timeContainer);
+    btn.classList.add("active");
+    selectedTime = opt.value;
+    applyFilters();
+  };
   timeContainer.appendChild(btn);
 });
 
+// Botones alumnos
 sizeOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = () => selectedSize = activateSingleButton(sizeContainer, selectedSize, opt.value);
+  btn.onclick = () => {
+    deactivateGroup(sizeContainer);
+    btn.classList.add("active");
+    selectedSize = opt.value;
+    applyFilters();
+  };
   sizeContainer.appendChild(btn);
 });
 
+// Botones feriantes
 peopleOptions.forEach(opt => {
   const btn = document.createElement("button");
   btn.textContent = opt.label;
-  btn.onclick = () => selectedPeople = activateSingleButton(peopleContainer, selectedPeople, opt.value);
+  btn.onclick = () => {
+    deactivateGroup(peopleContainer);
+    btn.classList.add("active");
+    selectedPeople = opt.value;
+    applyFilters();
+  };
   peopleContainer.appendChild(btn);
 });
 
+// Reset
 resetBtn.onclick = () => {
+  deactivateGroup(ageContainer);
+  deactivateGroup(timeContainer);
+  deactivateGroup(sizeContainer);
+  deactivateGroup(peopleContainer);
   selectedAge = selectedTime = selectedSize = selectedPeople = null;
-  document.querySelectorAll(".button-group button").forEach(b => b.classList.remove("active"));
   renderCards(activities);
-  countActiveFilters();
-  if (filtersOpen) {
-    filtersOpen = false;
-    filtersPanel.classList.add("hidden");
-    updateToggleButton();
+};
+
+// ===== MODAL =====
+closeModal.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target === modal) {
+    modal.style.display = "none";
   }
 };
 
-// Render
+function openModal(activity) {
+  modalBody.innerHTML = `
+    <h2>${activity.title}</h2>
+    <p><span class="label">Material:</span> ${activity.material.join(", ")}</p>
+    <p><span class="label">Edad:</span> ${activity.ages.join(", ")}</p>
+    <p><span class="label">Duración:</span> ${activity.duration} min</p>
+    <p><span class="label">Personas:</span> ${activity.people}</p>
+    <p><span class="label">Máx. alumnos:</span> ${activity.maxStudents}</p>
+    <p><span class="label">Tiempo mínimo visita:</span> ${activity.visit}</p>
+    <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
+    <div style="line-height: 1.6;">${activity.fullDescription.replace(/\n/g, "<br>")}</div>
+  `;
+  modal.style.display = "flex";
+}
+
+// ===== RENDER =====
+
 function renderCards(list) {
   cardsContainer.innerHTML = "";
   if (!list.length) {
@@ -307,7 +291,6 @@ function renderCards(list) {
       <p><span class="label">Personas:</span> ${a.people}</p>
       <p><span class="label">Máx. alumnos:</span> ${a.maxStudents}</p>
       <p><span class="label">Tiempo mínimo visita:</span> ${a.visit}</p>
-      <p><span class="label">Desarrollo:</span> ${a.description}</p>
       <button class="more-info-btn">Más información</button>
     `;
     card.querySelector(".more-info-btn").onclick = () => openModal(a);
@@ -315,37 +298,34 @@ function renderCards(list) {
   });
 }
 
-function openModal(activity) {
-  modalTitle.textContent = activity.title;
-  modalBody.innerHTML = `
-    <p><strong>Material:</strong> ${activity.material.join(", ")}</p>
-    <p><strong>Edad:</strong> ${activity.ages.join(", ")}</p>
-    <p><strong>Duración:</strong> ${activity.duration} min</p>
-    <p><strong>Personas:</strong> ${activity.people}</p>
-    <p><strong>Máx. alumnos:</strong> ${activity.maxStudents}</p>
-    <p><strong>Tiempo mínimo visita:</strong> ${activity.visit}</p>
-    <hr>
-    ${activity.moreInfo}
-  `;
-  modal.style.display = "block";
-}
+// ===== FILTRADO =====
 
-// Filtrado
 function applyFilters() {
   let result = activities.filter(a => {
-    if (selectedAge !== null && !a.ages.includes(selectedAge)) return false;
 
-    if (selectedTime !== null) {
-      const dur = a.duration;
-      const matchTime = 
-        (selectedTime === "short" && dur <= 3) ||
-        (selectedTime === "medium" && dur >= 4 && dur <= 7) ||
-        (selectedTime === "long" && dur >= 8);
-      if (!matchTime) return false;
+    // Edad
+    if (selectedAge !== null && !a.ages.includes(selectedAge)) {
+      return false;
     }
 
-    if (selectedSize !== null && a.maxStudents > selectedSize) return false;
+    // Duración
+    if (selectedTime !== null) {
+      const dur = a.duration;
+      const isShort = dur <= 3;
+      const isMedium = dur >= 4 && dur <= 7;
+      const isLong = dur >= 8;
 
+      if (selectedTime === "short" && !isShort) return false;
+      if (selectedTime === "medium" && !isMedium) return false;
+      if (selectedTime === "long" && !isLong) return false;
+    }
+
+    // Alumnos
+    if (selectedSize !== null && a.maxStudents > selectedSize) {
+      return false;
+    }
+
+    // Feriantes
     if (selectedPeople !== null) {
       const hasOne = a.people.includes("1");
       const hasTwo = a.people.includes("2");
@@ -357,9 +337,7 @@ function applyFilters() {
   });
 
   renderCards(result);
-  countActiveFilters();
 }
 
 // Inicial
-updateToggleButton();
 renderCards(activities);
