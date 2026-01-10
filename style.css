@@ -35,66 +35,60 @@ header {
 /* FILTROS */
 .filters {
   background: #ffffff;
-  padding: 20px;
+  padding: 30px 20px 50px;
   border-bottom: 1px solid #eee;
-  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.filters-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
+.filters-title {
+  color: #4a6cf7;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 28px;
 }
 
 .filters-content {
   display: flex;
-  flex-wrap: nowrap;
-  align-items: end;
-  gap: 24px;
+  flex-wrap: nowrap; /* Fuerza una sola fila */
   justify-content: center;
-  overflow-x: auto;
-  padding-bottom: 24px;
+  gap: 50px;
+  max-width: 100%;
+  width: 100%;
+  overflow-x: auto; /* Scroll horizontal solo si es imprescindible */
+  padding: 0 20px;
   transition: all 0.4s ease;
 }
 
-.filters.minimized .filters-content {
-  max-height: 0;
-  overflow: hidden;
-  padding-bottom: 0;
-  margin-bottom: 0;
-  opacity: 0;
-}
-
-/* Cada grupo */
 .filter-group {
-  flex: 0 1 auto;
-  min-width: 160px;
+  flex: 0 1 auto; /* No crecen innecesariamente */
+  min-width: 240px;
+  text-align: center;
 }
 
 .filter-group h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   color: #4a6cf7;
-  margin-bottom: 8px;
-  text-align: center;
+  margin-bottom: 12px;
 }
 
 .button-group {
   display: flex;
   flex-wrap: wrap;
-  gap: 7px;
+  gap: 8px;
   justify-content: center;
 }
 
 .button-group button {
-  padding: 7px 11px;
+  padding: 8px 14px;
   border: 2px solid #4a6cf7;
   background: #ffffff;
   color: #4a6cf7;
-  border-radius: 12px;
+  border-radius: 30px;
   cursor: pointer;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
   transition: all 0.3s ease;
   white-space: nowrap;
@@ -104,7 +98,6 @@ header {
   background: #4a6cf7;
   color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(74,108,247,0.2);
 }
 
 .button-group button.active {
@@ -114,52 +107,87 @@ header {
   box-shadow: 0 4px 8px rgba(255,214,10,0.3);
 }
 
-/* Botones de control */
-.reset, #toggleBtn {
-  background: #ff6b6b;
-  color: white;
+/* Controles debajo */
+.filters-controls {
+  margin-top: 40px;
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.toggle-btn, .reset {
+  padding: 10px 20px;
   border: none;
-  padding: 10px 14px;
-  border-radius: 12px;
+  border-radius: 30px;
   cursor: pointer;
   font-weight: 600;
   transition: all 0.3s ease;
-  white-space: nowrap;
-  margin-left: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.reset:hover, #toggleBtn:hover {
-  background: #ff5252;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(255,107,107,0.3);
-}
-
-#toggleBtn {
+.toggle-btn {
   background: #7b68ee;
+  color: white;
 }
 
-#toggleBtn:hover {
+.toggle-btn:hover {
   background: #6a5acd;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1100px) {
+.reset {
+  background: #ff6b6b;
+  color: white;
+}
+
+.reset:hover {
+  background: #ff5252;
+}
+
+.arrow {
+  font-size: 1.2em;
+}
+
+/* Minimizar contenido */
+.filters.minimized .filters-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* RESPONSIVE: permite wrap solo cuando es estrictamente necesario */
+@media (max-width: 1400px) {
   .filters-content {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    gap: 30px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
+  .filters-content {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .filter-group {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
   .filters-content {
     flex-direction: column;
-    align-items: stretch;
-    gap: 16px;
+    align-items: center;
+    gap: 30px;
   }
-  
   .filter-group {
+    flex: 1 1 auto;
     min-width: auto;
+    width: 100%;
+    max-width: 400px;
   }
 }
 
@@ -174,7 +202,6 @@ header {
 .card {
   background: #ffffff;
   border-radius: 18px;
-  border: none;
   box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   padding: 18px;
   transition: all 0.3s ease;

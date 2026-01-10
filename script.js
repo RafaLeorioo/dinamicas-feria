@@ -7,10 +7,7 @@ const activities = [
     people: "1 o 2 feriantes",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    fullDescription: `Desarrollo de la actividad
-La persona dinamizadora inicia la lectura del cuento elegido, poniendo especial énfasis en determinadas palabras clave. La dinámica consiste en que las criaturas repitan en forma de “eco” la última palabra que dice la persona dinamizadora, justo después de que esta haga una pequeña pausa.
-En el cuento Como tú, como yo, cada página contiene una palabra escrita en mayúsculas. La persona dinamizadora deberá leerla, detenerse y permitir que las criaturas la repitan en voz alta.
-La clave está en realizarlo de manera muy teatralizada: variando la voz, el volumen, el ritmo y la intención para mantener la atención del grupo y generar un ambiente dinámico y divertido.`
+    fullDescription: `Desarrollo de la actividad\nLa persona dinamizadora inicia la lectura del cuento elegido, poniendo especial énfasis en determinadas palabras clave. La dinámica consiste en que las criaturas repitan en forma de “eco” la última palabra que dice la persona dinamizadora, justo después de que esta haga una pequeña pausa.\nEn el cuento Como tú, como yo, cada página contiene una palabra escrita en mayúsculas. La persona dinamizadora deberá leerla, detenerse y permitir que las criaturas la repitan en voz alta.\nLa clave está en realizarlo de manera muy teatralizada: variando la voz, el volumen, el ritmo y la intención para mantener la atención del grupo y generar un ambiente dinámico y divertido.`
   },
   {
     title: "Cuento congelado",
@@ -20,12 +17,7 @@ La clave está en realizarlo de manera muy teatralizada: variando la voz, el vol
     people: "1 o 2 feriantes",
     maxStudents: 50,
     visit: "20 min (7' + 13')",
-    fullDescription: `Desarrollo de la actividad
-Las niñas y niños se colocan de pie dentro del espacio delimitado, recordando que no deben salir de él. Mientras la persona dinamizadora narra un cuento, pueden moverse libremente. Cuando la lectura se detenga, todas las criaturas —incluida la persona que guía— deben quedarse completamente congeladas hasta que la narración continúe.
-
-Variante con El primer libro de las emociones
-En esta versión, la persona dinamizadora se detiene cada vez que en el cuento aparece una emoción. En ese momento, todos deben congelarse e interpretar corporal y facialmente esa emoción.
-Ejemplo: Si se lee “… alegría” y se hace una pausa, las criaturas deben mostrar una expresión de alegría. Si luego aparece “miedo”, se repite el proceso mostrando esa emoción. La dinámica continúa así hasta el final del cuento.`
+    fullDescription: `Desarrollo de la actividad\nLas niñas y niños se colocan de pie dentro del espacio delimitado, recordando que no deben salir de él. Mientras la persona dinamizadora narra un cuento, pueden moverse libremente. Cuando la lectura se detenga, todas las criaturas —incluida la persona que guía— deben quedarse completamente congeladas hasta que la narración continúe.\n\nVariante con El primer libro de las emociones\nEn esta versión, la persona dinamizadora se detiene cada vez que en el cuento aparece una emoción. En ese momento, todos deben congelarse e interpretar corporal y facialmente esa emoción.\nEjemplo: Si se lee “… alegría” y se hace una pausa, las criaturas deben mostrar una expresión de alegría. Si luego aparece “miedo”, se repite el proceso mostrando esa emoción. La dinámica continúa así hasta el final del cuento.`
   },
   {
     title: "Finales locos",
@@ -35,17 +27,7 @@ Ejemplo: Si se lee “… alegría” y se hace una pausa, las criaturas deben m
     people: "2 feriantes",
     maxStudents: 50,
     visit: "30 min (15' + 15')",
-    fullDescription: `Desarrollo de la actividad
-“Finales Locos” es una dinámica donde se cuenta un cuento clásico y el alumnado lo transforma con ideas disparatadas. Favorece creatividad y participación.
-
-Inicio: Con un tono cercano (no infantil), el dinamizador/a explica: “Contaré un cuento conocido y vosotros completaréis los huecos con ideas locas.” (Mejor en círculo).
-Podemos usar cuentos presentes en la feria. Se anuncia el cuento, se narra haciendo pausas y cada alumno aporta una palabra u ocurrencia. El dinamizador/a la integra y continúa.
-Ejemplo: “Caperucita vivía con su… (pausa)” → perro “El perro se llamaba… (pausa)” → Eustaquio
-El dinamizador/a mantiene ritmo, humor y cohesión.
-
-* Los detalles absurdos funcionan con los grupos más mayores.
-* Mantén humor y agilidad
-* Evita censurar ideas`
+    fullDescription: `Desarrollo de la actividad\n“Finales Locos” es una dinámica donde se cuenta un cuento clásico y el alumnado lo transforma con ideas disparatadas. Favorece creatividad y participación.\n\nInicio: Con un tono cercano (no infantil), el dinamizador/a explica: “Contaré un cuento conocido y vosotros completaréis los huecos con ideas locas.” (Mejor en círculo).\nPodemos usar cuentos presentes en la feria. Se anuncia el cuento, se narra haciendo pausas y cada alumno aporta una palabra u ocurrencia. El dinamizador/a la integra y continúa.\nEjemplo: “Caperucita vivía con su… (pausa)” → perro “El perro se llamaba… (pausa)” → Eustaquio\nEl dinamizador/a mantiene ritmo, humor y cohesión.\n\n* Los detalles absurdos funcionan con los grupos más mayores.\n* Mantén humor y agilidad\n* Evita censurar ideas`
   },
   {
     title: "Preguntas y respuestas",
@@ -55,10 +37,7 @@ El dinamizador/a mantiene ritmo, humor y cohesión.
     people: "2 feriantes",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    fullDescription: `Desarrollo de la actividad
-Proponemos al grupo jugar a un juego de preguntas y respuestas literarias. Dispondremos de varias tarjetas clasificadas en tres categorías: PERSONAJES, TÍTULOS y VOCABULARIO.
-Iremos lanzando preguntas de las distintas categorías y, en función del tiempo disponible, podremos formular más o menos ítems.
-El alumnado deberá levantar la mano para pedir turno antes de responder. Además, podemos incorporar la opción de “rebote”: si una persona da una respuesta incorrecta, otra compañera u otro compañero podrá intentar responderla.`
+    fullDescription: `Desarrollo de la actividad\nProponemos al grupo jugar a un juego de preguntas y respuestas literarias. Dispondremos de varias tarjetas clasificadas en tres categorías: PERSONAJES, TÍTULOS y VOCABULARIO.\nIremos lanzando preguntas de las distintas categorías y, en función del tiempo disponible, podremos formular más o menos ítems.\nEl alumnado deberá levantar la mano para pedir turno antes de responder. Además, podemos incorporar la opción de “rebote”: si una persona da una respuesta incorrecta, otra compañera u otro compañero podrá intentar responderla.`
   },
   {
     title: "Cuento invisible",
@@ -68,9 +47,7 @@ El alumnado deberá levantar la mano para pedir turno antes de responder. Ademá
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    fullDescription: `Desarrollo de la actividad
-Nos colocamos delante del grupo y nos sentamos con ellos/as. Comenzamos a narrar una historia imaginaria, haciéndoles preguntas e invitándoles a participar: “¿Sabéis qué es esto?” (hacemos como si estuviéramos enseñando un cuento). “Es un cuento… ¿cómo es, grande o pequeño?” “¿De qué color es?” “¿Qué tiene en la portada?” “Cuenta la historia de ____ y ____.”
-Podemos aprovechar para enlazarlo con algún cuento de los que tengamos en la feria si la historia se asemeja a alguno, o incluso, intentar dirigir la historia para que el libro invisible sea alguno de la feria. De esta manera, les despertamos interés para que vayan a leerlo.`
+    fullDescription: `Desarrollo de la actividad\nNos colocamos delante del grupo y nos sentamos con ellos/as. Comenzamos a narrar una historia imaginaria, haciéndoles preguntas e invitándoles a participar: “¿Sabéis qué es esto?” (hacemos como si estuviéramos enseñando un cuento). “Es un cuento… ¿cómo es, grande o pequeño?” “¿De qué color es?” “¿Qué tiene en la portada?” “Cuenta la historia de ____ y ____.”\nPodemos aprovechar para enlazarlo con algún cuento de los que tengamos en la feria si la historia se asemeja a alguno, o incluso, intentar dirigir la historia para que el libro invisible sea alguno de la feria. De esta manera, les despertamos interés para que vayan a leerlo.`
   },
   {
     title: "¿Quién ganaría?",
@@ -80,14 +57,7 @@ Podemos aprovechar para enlazarlo con algún cuento de los que tengamos en la fe
     people: "2 feriantes",
     maxStudents: 50,
     visit: "20 min (10' + 10')",
-    fullDescription: `Desarrollo de la actividad
-Animamos al grupo a decir dos personajes de libros, personajes animados... Usaremos estos dos personajes para lanzarles preguntas con la premisa: “¿Quién ganaría…?”
-Por ejemplo, imaginemos que han elegido a Spiderman y un león. Las preguntas que podemos hacer serían:
-¿Quién ganaría en una competición de natación?
-¿Quién ganaría en una carrera de obstáculos?
-¿Quién ganaría encontrando un objeto escondido en el menor tiempo?
-¿Quién ganaría contando una historia divertida sin reírse?
-Como dinamizadores, marcamos que nuestra derecha corresponde a un personaje y nuestra izquierda al otro. En cada pregunta, el grupo deberá moverse hacia el lado del personaje que crean que ganaría.`
+    fullDescription: `Desarrollo de la actividad\nAnimamos al grupo a decir dos personajes de libros, personajes animados... Usaremos estos dos personajes para lanzarles preguntas con la premisa: “¿Quién ganaría…?”\nPor ejemplo, imaginemos que han elegido a Spiderman y un león. Las preguntas que podemos hacer serían:\n¿Quién ganaría en una competición de natación?\n¿Quién ganaría en una carrera de obstáculos?\n¿Quién ganaría encontrando un objeto escondido en el menor tiempo?\n¿Quién ganaría contando una historia divertida sin reírse?\nComo dinamizadores, marcamos que nuestra derecha corresponde a un personaje y nuestra izquierda al otro. En cada pregunta, el grupo deberá moverse hacia el lado del personaje que crean que ganaría.`
   },
   {
     title: "¿Qué preferirías?",
@@ -97,16 +67,7 @@ Como dinamizadores, marcamos que nuestra derecha corresponde a un personaje y nu
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (5' + 10')",
-    fullDescription: `Desarrollo de la actividad
-Una vez estamos con el grupo, les proponemos situaciones en las que tienen que elegir. Por ejemplo:
-¿Qué preferiríais: que en un duelo de magia ganase Harry Potter o Draco Malfoy?
-¿Qué preferiríais: que Sherlock Holmes resolviera un misterio en vuestro colegio o que lo resolviera la patrulla canina?
-¿Qué preferiríais: vivir una aventura con Gerónimo Stilton o con Alicia en el País de las Maravillas?
-Las últimas preguntas serán incluyendo personajes de los libros de la feria, del estilo:
-
-* ¿Qué preferiríais: que os entrenara para una misión LadyBug o Spiderman? - ¿Sabéis que en nuestra feria podéis encontrar mangas de ladybug y cómics de spiderman?
-* ¿Qué preferiríais: hacer una carrera contra un león o contra un dinosaurio? - Pues atentas y atentos, que también tenemos libros de animales y dinosaurios.
-* ¿Qué preferiríais: viajar a una isla tropical siendo un animal o una veterinaria? - Pues os invito/invitamos a que paséis a la feria del libro y que viajéis a través de todas las historias y libros que podéis encontrar en ella.`
+    fullDescription: `Desarrollo de la actividad\nUna vez estamos con el grupo, les proponemos situaciones en las que tienen que elegir. Por ejemplo:\n¿Qué preferiríais: que en un duelo de magia ganase Harry Potter o Draco Malfoy?\n¿Qué preferiríais: que Sherlock Holmes resolviera un misterio en vuestro colegio o que lo resolviera la patrulla canina?\n¿Qué preferiríais: vivir una aventura con Gerónimo Stilton o con Alicia en el País de las Maravillas?\nLas últimas preguntas serán incluyendo personajes de los libros de la feria, del estilo:\n\n* ¿Qué preferiríais: que os entrenara para una misión LadyBug o Spiderman? - ¿Sabéis que en nuestra feria podéis encontrar mangas de ladybug y cómics de spiderman?\n* ¿Qué preferiríais: hacer una carrera contra un león o contra un dinosaurio? - Pues atentas y atentos, que también tenemos libros de animales y dinosaurios.\n* ¿Qué preferiríais: viajar a una isla tropical siendo un animal o una veterinaria? - Pues os invito/invitamos a que paséis a la feria del libro y que viajéis a través de todas las historias y libros que podéis encontrar en ella.`
   },
   {
     title: "El personaje secreto",
@@ -116,11 +77,7 @@ Las últimas preguntas serán incluyendo personajes de los libros de la feria, d
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    fullDescription: `Desarrollo de la actividad
-Pensaremos en un personaje de un libro de la feria, y vamos dando pistas progresivas al grupo hasta que adivinen de quién se trata.
-Por ejemplo, si pensamos en un dinosaurio, las pistas podrían ser: Animal, extinto y algunos eran gigantes y otros pequeñitos.
-Tienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acierten el personaje.
-“Si solo con unas pistas habéis podido imaginar un personaje… ¡Imaginad todo lo que podréis descubrir entre libros!”`
+    fullDescription: `Desarrollo de la actividad\nPensaremos en un personaje de un libro de la feria, y vamos dando pistas progresivas al grupo hasta que adivinen de quién se trata.\nPor ejemplo, si pensamos en un dinosaurio, las pistas podrían ser: Animal, extinto y algunos eran gigantes y otros pequeñitos.\nTienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acierten el personaje.\n“Si solo con unas pistas habéis podido imaginar un personaje… ¡Imaginad todo lo que podréis descubrir entre libros!”`
   },
   {
     title: "Una palabra",
@@ -130,39 +87,27 @@ Tienen que ir respondiendo, pidiendo el turno levantando su mano, hasta que acie
     people: "1 feriante",
     maxStudents: 100,
     visit: "15 min (3' + 12')",
-    fullDescription: `Desarrollo de la actividad
-La persona dinamizadora prepara varios personajes conocidos por el alumnado (de cuentos, libros, series o dibujos). Los presenta en voz alta y con energía, por ejemplo: “¡Spiderman!”.
-El grupo levanta la mano y se elige a alguien para decir una asociación rápida (“araña”, “mayas”, “telarañas”).
-Se pueden repetir varias veces las asociaciones con un mismo personaje antes de cambiar a otro, como “¡Bluey!”, generando respuestas como “azul” o “perro”.
-Esta dinámica fomenta la atención, la rapidez mental, la participación y la asociación de ideas.
-
-Aspectos a considerar:
-Adaptar los personajes a la edad del grupo (más infantiles para 1.º-2.º de Primaria y más variados para cursos mayores). La duración es flexible y depende del tiempo disponible y de la energía del grupo.`
+    fullDescription: `Desarrollo de la actividad\nLa persona dinamizadora prepara varios personajes conocidos por el alumnado (de cuentos, libros, series o dibujos). Los presenta en voz alta y con energía, por ejemplo: “¡Spiderman!”.\nEl grupo levanta la mano y se elige a alguien para decir una asociación rápida (“araña”, “mayas”, “telarañas”).\nSe pueden repetir varias veces las asociaciones con un mismo personaje antes de cambiar a otro, como “¡Bluey!”, generando respuestas como “azul” o “perro”.\nEsta dinámica fomenta la atención, la rapidez mental, la participación y la asociación de ideas.\n\nAspectos a considerar:\nAdaptar los personajes a la edad del grupo (más infantiles para 1.º-2.º de Primaria y más variados para cursos mayores). La duración es flexible y depende del tiempo disponible y de la energía del grupo.`
   }
 ];
 
 // ===== FILTROS =====
-
 const ageOptions = ["Infantil", "1º", "2º", "3º", "4º", "5º", "6º"];
-
 const timeOptions = [
   { label: "≤ 3 min", value: "short" },
   { label: "4–7 min", value: "medium" },
   { label: "8–15 min", value: "long" }
 ];
-
 const sizeOptions = [
   { label: "Hasta 50", value: 50 },
   { label: "Hasta 75", value: 75 },
   { label: "Hasta 100", value: 100 }
 ];
-
 const peopleOptions = [
   { label: "1 feriante", value: "1" },
   { label: "2 feriantes", value: "2" }
 ];
 
-// Conjuntos de filtros seleccionados
 let selectedAges = new Set();
 let selectedTimes = new Set();
 let selectedSizes = new Set();
@@ -181,7 +126,6 @@ const modalBody = document.getElementById("modal-body");
 const closeModal = document.querySelector(".close");
 
 // ===== CREACIÓN DE BOTONES =====
-
 ageOptions.forEach(age => {
   const btn = document.createElement("button");
   btn.textContent = age;
@@ -231,7 +175,6 @@ peopleOptions.forEach(opt => {
 });
 
 // ===== BOTONES DE CONTROL =====
-
 resetBtn.onclick = () => {
   document.querySelectorAll(".button-group button.active").forEach(b => b.classList.remove("active"));
   selectedAges.clear();
@@ -243,7 +186,17 @@ resetBtn.onclick = () => {
 
 toggleBtn.onclick = () => {
   filtersSection.classList.toggle("minimized");
-  toggleBtn.textContent = filtersSection.classList.contains("minimized") ? "Maximizar" : "Minimizar";
+  
+  const textSpan = toggleBtn.querySelector(".toggle-text");
+  const arrowSpan = toggleBtn.querySelector(".arrow");
+  
+  if (filtersSection.classList.contains("minimized")) {
+    textSpan.textContent = "Maximizar";
+    arrowSpan.textContent = "↓";
+  } else {
+    textSpan.textContent = "Minimizar";
+    arrowSpan.textContent = "↑";
+  }
 };
 
 // ===== MODAL =====
@@ -291,18 +244,14 @@ function renderCards(list) {
   });
 }
 
-// ===== FILTRADO ESTRICTO (AND dentro de cada categoría) =====
+// ===== FILTRADO ESTRICTO =====
 function applyFilters() {
   let result = activities.filter(a => {
-
-    // Edad: debe incluir TODAS las edades seleccionadas
     if (selectedAges.size > 0) {
       for (let age of selectedAges) {
         if (!a.ages.includes(age)) return false;
       }
     }
-
-    // Duración: debe cumplir TODOS los rangos seleccionados
     if (selectedTimes.size > 0) {
       const dur = a.duration;
       for (let range of selectedTimes) {
@@ -311,14 +260,10 @@ function applyFilters() {
         if (range === "long" && !(dur >= 8)) return false;
       }
     }
-
-    // Máx. alumnos: debe ser ≤ al valor MÁS RESTRICTIVO (el menor seleccionado)
     if (selectedSizes.size > 0) {
       const minAllowed = Math.min(...selectedSizes);
       if (a.maxStudents > minAllowed) return false;
     }
-
-    // Feriantes: debe soportar TODOS los números seleccionados
     if (selectedPeople.size > 0) {
       const hasOne = a.people.includes("1");
       const hasTwo = a.people.includes("2");
@@ -327,7 +272,6 @@ function applyFilters() {
         if (p === "2" && !hasTwo) return false;
       }
     }
-
     return true;
   });
 
